@@ -1,0 +1,39 @@
+version: '3.3'
+services:
+  mongo-database:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - '27017:27017'
+    environment:
+      - AUTH=no
+    healthcheck:
+      test: >-
+        echo 'db.runCommand("ping").ok' | mongo mongo-database:27017/test
+        --quiet
+      interval: 10s
+      timeout: 10s
+    networks:
+      - api-network
+  cards-analyzer-api:
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+    container_name: cards-analyzer-api
+    ports:
+      - '8000:8000'
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - 'http://cards-analyzer-api:8000/healthcheck'
+      interval: 10s
+      timeout: 10s
+    networks:
+      - api-network
+    depends_on:
+      mongo-database:
+        condition: service_healthy
+networks:
+  api-network:
+    driver: bridge
