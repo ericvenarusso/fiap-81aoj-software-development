@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     model_path: str
 
     class Config:
-        env_file = "config/api/dev.env"
+        env_file = "dev.env"
         
 @lru_cache
 def get_settings():

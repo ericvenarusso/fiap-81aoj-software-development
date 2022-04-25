@@ -18,7 +18,6 @@ services:
   cards-analyzer-api:
     build:
       context: .
-      dockerfile: ./docker/api/Dockerfile
     container_name: cards-analyzer-api
     ports:
       - '8000:8000'

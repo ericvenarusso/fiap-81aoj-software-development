@@ -3,9 +3,9 @@ FROM python:3.8
 WORKDIR /usr/src/app/gods_unchained_card_analyzer
 
 COPY app/ ./app/
-COPY config/api/ ./config/api/
+COPY dev.env ./dev.env
 COPY models/ ./models/.
-COPY requirements/api/requirements.txt ./requirements.txt
+COPY requirements.txt ./requirements.txt
 
 EXPOSE 8000
 
