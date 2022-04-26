@@ -7,7 +7,6 @@ class Settings(BaseSettings):
     app_name: str
     app_version: str
     app_description: str
-    mongodb_url: str
     model_path: str
 
     class Config:
