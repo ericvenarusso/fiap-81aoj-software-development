@@ -38,8 +38,25 @@ Caso você deseje desligar os serviços, você deve executar.
 docker compose down
 ```
 
+### Testes
+Para rodar os testes, você deve subir o mongo com o comando: 
+```console
+docker compose up mongo-database
+```
+E execute os testes
+```console
+pytest
+```
+
+| Conceitos | Descrição |
+| --- | --- |
+| SOLID | Seguimos os príncipios SOLID. Separamos o projeto por responsabilidades, permitimos que esteja aberta para evoluções, reduzindo dependências e alto acoplamento.
+| TDD | Seguimos o mantra do TDD, criamos testes unitários e testes de integração.
+| Repository Design Pattern | Ao utilizar esse Design pattern, separamos a responsabilidade de acesso ao banco e permitimos alterá-lo com maior facilidade.
+| Docker | Nos ajudou a ter um ambiente mais rápido e confiável. |
+
 ## Licensa, Autores, e Agradecimentos.
-Eric Buzato Venarusso - RM: 342225
-Rafael Lino - RM: 337004
-Gabriela Carvalho - RM: 340876
-Lucas Vasconcelos de Carvalho - RM: 340543
+Eric Buzato Venarusso - RM: 342225 <br>
+Rafael Lino - RM: 337004 <br>
+Gabriela Carvalho - RM: 340876 <br>
+Lucas Vasconcelos de Carvalho - RM: 340543 <br>
