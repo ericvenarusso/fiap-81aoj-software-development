@@ -1,6 +1,6 @@
 import joblib
 
-from app.machine_learning.predictor import _load_model, predict
+from app.machine_learning.model import StrategyModel
 
 
 def test_load_model():
@@ -11,7 +11,8 @@ def test_load_model():
     mocked_model_path = "tests/models/test_model_predict.pkl"
     mocked_model = joblib.load(mocked_model_path)
 
-    model = _load_model(mocked_model_path)
+
+    model = StrategyModel._load_model(mocked_model_path)
 
     assert type(mocked_model) == type(model)
 
@@ -22,6 +23,6 @@ def test_predict():
     """
     mock_data_one_row = [1, 2, 3]
 
-    one_row_prediction = predict(mock_data_one_row)
+    one_row_prediction = StrategyModel().predict(mock_data_one_row)
 
     assert isinstance(one_row_prediction[0], str)
