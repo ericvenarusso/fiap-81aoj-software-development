@@ -48,6 +48,13 @@ E execute os testes
 pytest
 ```
 
+| Conceitos | Descrição |
+| --- | --- |
+| SOLID | Seguimos os príncipios SOLID. Separamos o projeto por responsabilidades, permitimos que esteja aberta para evoluções, reduzindo dependências e alto acoplamento.
+| TDD | Seguimos o mantra do TDD, criamos testes unitários e testes de integração.
+| Repository Design Pattern | Ao utilizar esse Design pattern, separamos a responsabilidade de acesso ao banco e permitimos alterá-lo com maior facilidade.
+| Docker | Nos ajudou a ter um ambiente mais rápido e confiável. |
+
 ## Licensa, Autores, e Agradecimentos.
 Eric Buzato Venarusso - RM: 342225 <br>
 Rafael Lino - RM: 337004 <br>
