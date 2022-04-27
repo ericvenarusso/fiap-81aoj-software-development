@@ -43,6 +43,10 @@ Para rodar os testes, você deve subir o mongo com o comando:
 ```console
 docker compose up mongo-database
 ```
+No seu ambiente virtual Python, instale as dependências.
+```console
+pip install -r requirements.txt
+```
 E execute os testes
 ```console
 pytest
